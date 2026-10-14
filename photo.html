@@ -19,6 +19,7 @@
             <a href="index.html">Home</a>
             <a href="photo.html">Photo</a>
             <a href="table.html">Albums</a>
+            <a href="auth.html" class="a-ico"><img src="https://cdn-icons-png.flaticon.com/128/1144/1144760.png" class="auth-ico"></a>
         </nav>
     </header>
 
@@ -40,8 +41,62 @@
     <footer>
         <nav>
             <a href="111">Contact: Shavrov Alexandr</a>
+            <button class="feedback-button" popovertarget="feedback">feedback</button>
             <p>© 2026 ООО GUF inc. Все права защищены.</p>
         </nav>
     </footer>
+
+    <dialog class="feedback-dialog" id="feedback" popover>
+        <form class="feedback-form" action="index.html" method="POST">
+            <label for="fio">ФИО:</label>
+            <input type="text" id="fio" placeholder="Введите имя">
+
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Введите Email">
+
+            <br>
+
+            <p>Откуда узнали о нас: 
+
+            <br>
+
+            <input type="radio" id="webad" name="source" value="Интернет реклама" checked>
+            <label for="webad">Интернет реклама</label><br>
+
+            <input type="radio" id="friends" name="source" value="Друзья">
+            <label for="friends">Друзья</label><br>
+
+            <input type="radio" id="TVad" name="source" value="ТВ реклама">
+            <label for="blue">ТВ реклама</label>
+            </p>
+
+            <br>
+
+            <label for="reqtype">Тип обращения:</label>
+            <select id="reqtype">
+                <option value="">--Пожалуйста, выберите вариант--</option>
+                <option value="msk">Жалоба</option>
+                <option value="spb">Обращение</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="massage">Сообщение</label>
+            <br>
+            <textarea type="text" id="massage" class="massage-box" placeholder="Введите сообщение"></textarea>
+
+            <br>
+
+            <input type="checkbox" id="ans" value="yes">
+            <label for="ans">Даю согласие на обработку персональных данных</label><br>
+
+            <br>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </dialog>
 </body>
 </html>
